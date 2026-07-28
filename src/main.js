@@ -52,7 +52,7 @@ function fillProjectsRow(tr, item){
   const cells = tr.querySelectorAll('td.cell');
   let nameHtml = `<span class="cell-primary revealed">${item.name}</span>`;
   if (item.status === 'in-progress') {
-    nameHtml += ` <span class="progress-pill revealed">In Progress</span>`;
+    nameHtml += `<div style="margin-top: 4px;"><span class="progress-pill revealed" style="margin-left: 0;">In Progress</span></div>`;
   }
   cells[0].innerHTML = nameHtml;
   cells[1].innerHTML = `<span class="cell-desc revealed">${item.desc}</span>`;
