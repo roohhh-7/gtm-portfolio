@@ -287,18 +287,45 @@ modalEnrichBtn.addEventListener('click', async () => {
           <p>less manual effort</p>
         </div>
         <div class="stat-card">
-          <h3>2x</h3>
+          <h3>3x</h3>
           <p>meetings booked</p>
         </div>
         <div class="stat-card">
           <h3>&lt;5m</h3>
-          <p>SLA on leads</p>
+          <p>lead response</p>
         </div>
       </div>
       
       <div class="ext-section">
-        <h4>CASE STUDY</h4>
-        <p>Please provide the case study details for Orbital so we can populate this section.</p>
+        <h4>PROBLEM</h4>
+        <p>SDRs spend over 40% of their time trapped in manual data entry and toggling between siloed applications, causing severe context-switching and data hygiene issues.</p>
+      </div>
+      
+      <div class="ext-section">
+        <h4>APPROACH</h4>
+        <ul>
+          <li><strong>Centralization:</strong> Brought the entire ABM workflow into one multi-tabbed, spreadsheet-style UI.</li>
+          <li><strong>Autonomous Orchestration:</strong> Implemented "Zero-Click" enrichment via background API routing and intelligent caching.</li>
+          <li><strong>Actionable Intelligence:</strong> Deployed an AI Co-Pilot to instantly synthesize firmographics and draft hyper-personalized emails.</li>
+        </ul>
+      </div>
+      
+      <div class="ext-section">
+        <h4>TOOLS</h4>
+        <table class="tools-table">
+          <tr><td>n8n</td><td>Workflow orchestration (CRM & Slack syncing)</td></tr>
+          <tr><td>Apollo & Clay</td><td>Zero-click lead discovery and enrichment</td></tr>
+          <tr><td>LLMs</td><td>Deep research and automated personalized drafting</td></tr>
+        </table>
+      </div>
+      
+      <div class="ext-section">
+        <h4>TIMELINE & METRICS</h4>
+        <div class="timeline-grid">
+          <span class="tl-label">Status</span><span class="tl-val">MVP Completed</span>
+          <span class="tl-label">Time-to-Value</span><span class="tl-val">&lt; 3 mins</span>
+          <span class="tl-label">Data Accuracy</span><span class="tl-val">100% CRM sync</span>
+        </div>
       </div>
       
       <div style="margin-top: 24px;">
