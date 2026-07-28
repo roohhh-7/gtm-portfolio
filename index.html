@@ -17,32 +17,34 @@
       <span class="grid-icon"><span></span><span></span><span></span><span></span></span>
       gtm_engineer.sheet
     </div>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <span class="save-state" id="saveState">saved</span>
-      <span class="avatar-chip">AR</span>
+    <div style="display:flex; align-items:center; gap:16px;">
+
+      <button class="run-btn run-all-btn" id="btnRunAll">
+        <span class="spark">✦</span><span class="label">Enrich All Sheets</span>
+      </button>
+      <span class="avatar-chip">RS</span>
     </div>
   </div>
 
   <div class="formula-bar">
     <span class="cell-ref" id="cellRef">A1</span>
     <span class="fx">fx</span>
-    <span class="formula-text" id="formulaText">Alex Rivera</span>
+    <span class="formula-text" id="formulaText">Rohit S.</span>
   </div>
 
   <div class="sheet-scroll">
 
     <!-- PROFILE RECORD -->
-    <div class="record-card" id="sec-profile">
+    <div class="record-card section-target" id="sec-profile">
       <div class="record-top">
         <div class="record-id-pic">
-          <div class="photo">AR</div>
+          <div class="photo">RS</div>
           <div>
-            <p class="record-name">Alex Rivera</p>
-            <p class="record-role">GTM Engineer · RevOps &amp; Automation · Austin, TX</p>
+            <p class="record-name">Rohit S.</p>
+            <p class="record-role">GTM Engineer · RevOps &amp; Automation · Trivandrum, KL</p>
           </div>
         </div>
         <div style="display:flex; align-items:center; gap:10px;">
-          <span class="status-pill" id="statusPill">unenriched</span>
           <button class="run-btn" id="btnProfile">
             <span class="spark">✦</span><span class="label">Run enrichment</span>
           </button>
@@ -71,11 +73,11 @@
     </div>
 
     <!-- PROJECTS GRID -->
-    <div class="grid-section" id="sec-projects">
+    <div class="grid-section section-target" id="sec-projects">
       <div class="grid-head">
         <div>
           <h2 class="grid-title">Projects</h2>
-          <p class="grid-sub">4 rows</p>
+          <p class="grid-sub">3 rows</p>
         </div>
         <button class="run-btn" id="btnProjects"><span class="spark">✦</span><span class="label">Run enrichment</span></button>
       </div>
@@ -86,7 +88,7 @@
             <th>Project<span class="col-type">TXT</span></th>
             <th>Description<span class="col-type">TXT</span></th>
             <th>Stack<span class="col-type">TAG</span></th>
-            <th>Result<span class="col-type">NUM</span></th>
+            <th>Impact<span class="col-type">NUM</span></th>
           </tr>
         </thead>
         <tbody id="projectsBody"></tbody>
@@ -94,7 +96,7 @@
     </div>
 
     <!-- EXPERIENCE GRID -->
-    <div class="grid-section" id="sec-experience">
+    <div class="grid-section section-target" id="sec-experience">
       <div class="grid-head">
         <div>
           <h2 class="grid-title">Experience</h2>
@@ -117,32 +119,33 @@
     </div>
 
     <!-- CONTACT -->
-    <div class="grid-section" id="sec-contact">
+    <div class="grid-section section-target" id="sec-contact">
       <div class="grid-head">
         <div>
           <h2 class="grid-title">Contact</h2>
-          <p class="grid-sub">click a row to copy</p>
+          <p class="grid-sub">3 rows</p>
         </div>
+        <button class="run-btn" id="btnContact"><span class="spark">✦</span><span class="label">Run enrichment</span></button>
       </div>
       <table>
         <thead>
           <tr><th class="rownum-col">#</th><th>Field<span class="col-type">TAG</span></th><th>Value<span class="col-type">URL</span></th></tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody id="contactBody">
+          <tr class="row-skel">
             <td class="rownum-col">1</td>
-            <td class="cell-mono">email</td>
-            <td class="cell copyable" tabindex="0" data-copy="alex@example.com"><span class="cell-value">alex@example.com</span><span class="copied-tag">✓ copied to clipboard</span></td>
+            <td class="cell"><div class="skeleton skel-line" style="width:60px;"></div></td>
+            <td class="cell"><div class="skeleton skel-line" style="width:140px;"></div></td>
           </tr>
-          <tr>
+          <tr class="row-skel">
             <td class="rownum-col">2</td>
-            <td class="cell-mono">linkedin</td>
-            <td class="cell copyable" tabindex="0" data-copy="linkedin.com/in/alexrivera"><span class="cell-value">linkedin.com/in/alexrivera</span><span class="copied-tag">✓ copied to clipboard</span></td>
+            <td class="cell"><div class="skeleton skel-line" style="width:70px;"></div></td>
+            <td class="cell"><div class="skeleton skel-line" style="width:180px;"></div></td>
           </tr>
-          <tr>
+          <tr class="row-skel">
             <td class="rownum-col">3</td>
-            <td class="cell-mono">github</td>
-            <td class="cell copyable" tabindex="0" data-copy="github.com/alexrivera"><span class="cell-value">github.com/alexrivera</span><span class="copied-tag">✓ copied to clipboard</span></td>
+            <td class="cell"><div class="skeleton skel-line" style="width:60px;"></div></td>
+            <td class="cell"><div class="skeleton skel-line" style="width:160px;"></div></td>
           </tr>
         </tbody>
       </table>
@@ -150,14 +153,48 @@
 
   </div>
 
-  <div class="sheet-tabs">
-    <a href="#sec-profile">Profile</a>
-    <a href="#sec-projects">Projects</a>
-    <a href="#sec-experience">Experience</a>
-    <a href="#sec-contact">Contact</a>
+  <div class="sheet-tabs" id="sheetTabs">
+    <a href="#sec-profile" data-target="sec-profile">Profile</a>
+    <a href="#sec-projects" data-target="sec-projects">Projects</a>
+    <a href="#sec-experience" data-target="sec-experience">Experience</a>
+    <a href="#sec-contact" data-target="sec-contact">Contact</a>
   </div>
 
 </div>
+
+<div id="projectModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <div class="modal-header-top">
+      <div class="modal-eyebrow">PROJECT RECORD</div>
+      <button id="modalClose" class="modal-close">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="modal-header-main">
+      <h2 id="modalTitle">Project Name</h2>
+      <div id="modalChips" class="modal-chips"></div>
+    </div>
+    
+    <div class="modal-body">
+      <p id="modalDesc" class="modal-desc">Project description...</p>
+      
+      <div id="modalMetric" class="modal-metric"></div>
+      
+      <div class="modal-toolbar" id="modalToolbar">
+        <button class="run-btn" id="modalEnrichBtn">
+          <span class="spark">✦</span><span class="label">Enrich for full details</span>
+        </button>
+      </div>
+
+      <div class="modal-extended hidden" id="modalExtended">
+        <!-- Will be injected by JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>
