@@ -297,34 +297,43 @@ modalEnrichBtn.addEventListener('click', async () => {
       </div>
       
       <div class="ext-section">
-        <h4>PROBLEM</h4>
-        <p>SDRs spend over 40% of their time trapped in manual data entry and toggling between siloed applications, causing severe context-switching and data hygiene issues.</p>
-      </div>
-      
-      <div class="ext-section">
-        <h4>APPROACH</h4>
-        <ul>
-          <li><strong>Centralization:</strong> Brought the entire ABM workflow into one multi-tabbed, spreadsheet-style UI.</li>
-          <li><strong>Autonomous Orchestration:</strong> Implemented "Zero-Click" enrichment via background API routing and intelligent caching.</li>
-          <li><strong>Actionable Intelligence:</strong> Deployed an AI Co-Pilot to instantly synthesize firmographics and draft hyper-personalized emails.</li>
+        <h4>THE PROBLEM & PAIN POINTS</h4>
+        <p>SDRs spend over 40% of their working hours trapped in manual data entry, toggling between siloed applications (LinkedIn, Clay, ChatGPT, CRM), and drafting cold outreach that yields diminishing ROI.</p>
+        <ul style="margin-top: 8px;">
+          <li><strong>Time Poverty:</strong> 4 hours spent researching leaves only 4 hours to actually sell.</li>
+          <li><strong>Data Decay:</strong> By the time a CSV is exported, enriched, and uploaded, data is disorganized.</li>
+          <li><strong>The Personalization Paradox:</strong> Highly personalized emails get responses but don't scale; generic templates scale but get ignored.</li>
         </ul>
       </div>
       
       <div class="ext-section">
-        <h4>TOOLS</h4>
+        <h4>THE SOLUTION: PRODUCT VISION</h4>
+        <p>Orbital is an autonomous Go-To-Market infrastructure platform that consolidates lead discovery, data enrichment, and AI-driven personalization into a single workspace.</p>
+        <ul style="margin-top: 8px;">
+          <li><strong>Centralization:</strong> A multi-tabbed, spreadsheet-style UI (Campaign > Company > People) to manage ABM workflows.</li>
+          <li><strong>Autonomous Orchestration:</strong> "Zero-Click" enrichment automatically queries data providers and caches records instantly.</li>
+          <li><strong>Actionable Intelligence:</strong> An AI Research Co-Pilot synthesizes firmographics and news into personalized email drafts.</li>
+        </ul>
+      </div>
+      
+      <div class="ext-section">
+        <h4>TOOLS & REVOPs ORCHESTRATION</h4>
         <table class="tools-table">
-          <tr><td>n8n</td><td>Workflow orchestration (CRM & Slack syncing)</td></tr>
-          <tr><td>Apollo & Clay</td><td>Zero-click lead discovery and enrichment</td></tr>
-          <tr><td>LLMs</td><td>Deep research and automated personalized drafting</td></tr>
+          <tr><td>n8n</td><td>Workflow orchestration (pushing data to HubSpot & Slack seamlessly)</td></tr>
+          <tr><td>Apollo & Clay</td><td>Zero-click firmographic discovery and contact enrichment</td></tr>
+          <tr><td>LLMs</td><td>Deep research synthesis and automated hyper-personalized copywriting</td></tr>
+          <tr><td>HubSpot</td><td>100% accurate CRM sync with automated bi-directional updates</td></tr>
         </table>
       </div>
       
       <div class="ext-section">
-        <h4>TIMELINE & METRICS</h4>
-        <div class="timeline-grid">
+        <h4>RESULTS & GTM STRATEGY</h4>
+        <p>Positioned as "The AI SDR that scales your best reps" targeting mid-market B2B SaaS. Driven by a Product-Led Growth (PLG) motion offering 50 free enriched contacts.</p>
+        <div class="timeline-grid" style="margin-top: 12px;">
           <span class="tl-label">Status</span><span class="tl-val">MVP Completed</span>
-          <span class="tl-label">Time-to-Value</span><span class="tl-val">&lt; 3 mins</span>
-          <span class="tl-label">Data Accuracy</span><span class="tl-val">100% CRM sync</span>
+          <span class="tl-label">Time-to-Value</span><span class="tl-val">&lt; 3 minutes to first email</span>
+          <span class="tl-label">Data Accuracy</span><span class="tl-val">100% automated CRM sync</span>
+          <span class="tl-label">Response SLA</span><span class="tl-val">&lt; 5 minutes</span>
         </div>
       </div>
       
