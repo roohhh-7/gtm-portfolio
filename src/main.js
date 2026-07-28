@@ -279,56 +279,86 @@ modalEnrichBtn.addEventListener('click', async () => {
   const ext = document.getElementById('modalExtended');
   ext.classList.remove('hidden');
   
-  ext.innerHTML = `
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h3>98%</h3>
-        <p>fill rate</p>
+  if (document.getElementById('modalTitle').textContent === 'Orbital') {
+    ext.innerHTML = `
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>85%</h3>
+          <p>less manual effort</p>
+        </div>
+        <div class="stat-card">
+          <h3>2x</h3>
+          <p>meetings booked</p>
+        </div>
+        <div class="stat-card">
+          <h3>&lt;5m</h3>
+          <p>SLA on leads</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <h3>-63%</h3>
-        <p>enrichment cost</p>
+      
+      <div class="ext-section">
+        <h4>CASE STUDY</h4>
+        <p>Please provide the case study details for Orbital so we can populate this section.</p>
       </div>
-      <div class="stat-card">
-        <h3>&lt;30s</h3>
-        <p>per lead</p>
+      
+      <div style="margin-top: 24px;">
+        <a href="https://app.notion.com/p/Case-Study-Orbital-Autonomous-B2B-Go-To-Market-Engine-3998fab9854d80f593e2edf0ed8012a1" target="_blank" class="run-btn" style="text-decoration:none; display:inline-flex;">
+          <span class="spark">✦</span><span class="label">View full case study</span>
+        </a>
       </div>
-    </div>
-    
-    <div class="ext-section">
-      <h4>PROBLEM</h4>
-      <p>Around a third of inbound leads arrived with missing company data, which meant reps either skipped them or wasted time researching manually.</p>
-    </div>
-    
-    <div class="ext-section">
-      <h4>APPROACH</h4>
-      <ul>
-        <li>Mapped every required field to its cheapest reliable data source first</li>
-        <li>Built a Clay waterfall that only calls a paid provider when the free one comes back empty</li>
-        <li>Added a confidence score so reps know which fields to double check</li>
-      </ul>
-    </div>
-    
-    <div class="ext-section">
-      <h4>TOOLS</h4>
-      <table class="tools-table">
-        <tr><td>Clay</td><td>Waterfall orchestration + confidence scoring</td></tr>
-        <tr><td>Clearbit</td><td>Primary firmographic source</td></tr>
-        <tr><td>Apollo</td><td>Fallback + contact-level enrichment</td></tr>
-      </table>
-    </div>
-    
-    <div class="ext-section">
-      <h4>TIMELINE</h4>
-      <div class="timeline-grid">
-        <span class="tl-label">Mapping</span><span class="tl-val">4 days</span>
-        <span class="tl-label">Build</span><span class="tl-val">2 weeks</span>
-        <span class="tl-label">Tuning</span><span class="tl-val">ongoing</span>
+    `;
+  } else {
+    ext.innerHTML = `
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>98%</h3>
+          <p>fill rate</p>
+        </div>
+        <div class="stat-card">
+          <h3>-63%</h3>
+          <p>enrichment cost</p>
+        </div>
+        <div class="stat-card">
+          <h3>&lt;30s</h3>
+          <p>per lead</p>
+        </div>
       </div>
-    </div>
-    
-    <a href="#" class="read-more">Read full case study &rarr;</a>
-  `;
+      
+      <div class="ext-section">
+        <h4>PROBLEM</h4>
+        <p>Around a third of inbound leads arrived with missing company data, which meant reps either skipped them or wasted time researching manually.</p>
+      </div>
+      
+      <div class="ext-section">
+        <h4>APPROACH</h4>
+        <ul>
+          <li>Mapped every required field to its cheapest reliable data source first</li>
+          <li>Built a Clay waterfall that only calls a paid provider when the free one comes back empty</li>
+          <li>Added a confidence score so reps know which fields to double check</li>
+        </ul>
+      </div>
+      
+      <div class="ext-section">
+        <h4>TOOLS</h4>
+        <table class="tools-table">
+          <tr><td>Clay</td><td>Waterfall orchestration + confidence scoring</td></tr>
+          <tr><td>Clearbit</td><td>Primary firmographic source</td></tr>
+          <tr><td>Apollo</td><td>Fallback + contact-level enrichment</td></tr>
+        </table>
+      </div>
+      
+      <div class="ext-section">
+        <h4>TIMELINE</h4>
+        <div class="timeline-grid">
+          <span class="tl-label">Mapping</span><span class="tl-val">4 days</span>
+          <span class="tl-label">Build</span><span class="tl-val">2 weeks</span>
+          <span class="tl-label">Tuning</span><span class="tl-val">ongoing</span>
+        </div>
+      </div>
+      
+      <a href="#" class="read-more">Read full case study &rarr;</a>
+    `;
+  }
   
   modalEnrichBtn.classList.remove('is-running');
   modalEnrichBtn.classList.add('done');
