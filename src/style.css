@@ -634,3 +634,23 @@ a.contact-link:hover {
   background: transparent !important;
 }
 
+@media (max-width: 768px) {
+  /* Projects table - hide #, Stack, Impact */
+  #sec-projects table th:nth-child(1), #sec-projects table td:nth-child(1),
+  #sec-projects table th:nth-child(4), #sec-projects table td:nth-child(4),
+  #sec-projects table th:nth-child(5), #sec-projects table td:nth-child(5) {
+    display: none;
+  }
+  
+  /* Experience table - hide #, Dates, Impact */
+  #sec-experience table th:nth-child(1), #sec-experience table td:nth-child(1),
+  #sec-experience table th:nth-child(4), #sec-experience table td:nth-child(4),
+  #sec-experience table th:nth-child(5), #sec-experience table td:nth-child(5) {
+    display: none;
+  }
+
+  /* Contact table - hide # */
+  #sec-contact table th:nth-child(1), #sec-contact table td:nth-child(1) {
+    display: none;
+  }
+}

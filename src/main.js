@@ -69,6 +69,8 @@ function fillExperienceRow(tr, item){
   cells[2].innerHTML = `<span class="cell-mono revealed">${item.dates}</span>`;
   cells[3].innerHTML = `<span class="cell-desc revealed" style="max-width:30ch;">${item.impact}</span><span class="ai-badge">✦ verified</span>`;
   tr.classList.remove('row-skel');
+  tr.classList.add('clickable-row');
+  tr.addEventListener('click', () => openExperienceModal(item));
 }
 function fillContactRow(tr, item){
   const cells = tr.querySelectorAll('td.cell');
@@ -229,6 +231,7 @@ const modalClose = document.getElementById('modalClose');
 const modalEnrichBtn = document.getElementById('modalEnrichBtn');
 
 function openProjectModal(item) {
+  document.querySelector('.modal-eyebrow').textContent = 'PROJECT RECORD';
   document.getElementById('modalTitle').textContent = item.name;
   
   // Inject Chips
@@ -249,6 +252,28 @@ function openProjectModal(item) {
   modalEnrichBtn.classList.remove('done', 'is-running');
   modalEnrichBtn.querySelector('.label').textContent = 'Enrich for full details';
   modalEnrichBtn.dataset.project = item.name;
+  
+  modalOverlay.classList.remove('hidden');
+  document.body.classList.add('no-scroll');
+}
+
+function openExperienceModal(item) {
+  document.querySelector('.modal-eyebrow').textContent = 'EXPERIENCE RECORD';
+  document.getElementById('modalTitle').textContent = item.role;
+  
+  // Inject Chips
+  const chipsHtml = `<span class="chip">${item.company}</span><span class="chip">${item.dates}</span>`;
+  document.getElementById('modalChips').innerHTML = chipsHtml;
+  
+  document.getElementById('modalDesc').textContent = item.impact;
+  
+  // Clear metric pill
+  document.getElementById('modalMetric').innerHTML = '';
+  
+  // Reset modal state
+  document.getElementById('modalExtended').classList.add('hidden');
+  document.getElementById('modalExtended').innerHTML = '';
+  document.getElementById('modalToolbar').style.display = 'none';
   
   modalOverlay.classList.remove('hidden');
   document.body.classList.add('no-scroll');
