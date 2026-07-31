@@ -427,54 +427,14 @@ modalEnrichBtn.addEventListener('click', async () => {
     `;
   } else {
     ext.innerHTML = `
-      <div class="stats-grid">
-        <div class="stat-card">
-          <h3>98%</h3>
-          <p>fill rate</p>
-        </div>
-        <div class="stat-card">
-          <h3>-63%</h3>
-          <p>enrichment cost</p>
-        </div>
-        <div class="stat-card">
-          <h3>&lt;30s</h3>
-          <p>per lead</p>
-        </div>
+      <div style="text-align: center; padding: 40px 20px; color: var(--ink-soft);">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.5; margin-bottom:12px;">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <h3 style="font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 6px;">Case Study In Progress</h3>
+        <p style="font-size: 13.5px; max-width: 260px; margin: 0 auto;">I'm currently documenting the GTM operating system and workflows for Catalyst.</p>
       </div>
-      
-      <div class="ext-section">
-        <h4>PROBLEM</h4>
-        <p>Around a third of inbound leads arrived with missing company data, which meant reps either skipped them or wasted time researching manually.</p>
-      </div>
-      
-      <div class="ext-section">
-        <h4>APPROACH</h4>
-        <ul>
-          <li>Mapped every required field to its cheapest reliable data source first</li>
-          <li>Built a Clay waterfall that only calls a paid provider when the free one comes back empty</li>
-          <li>Added a confidence score so reps know which fields to double check</li>
-        </ul>
-      </div>
-      
-      <div class="ext-section">
-        <h4>TOOLS</h4>
-        <table class="tools-table">
-          <tr><td>Clay</td><td>Waterfall orchestration + confidence scoring</td></tr>
-          <tr><td>Clearbit</td><td>Primary firmographic source</td></tr>
-          <tr><td>Apollo</td><td>Fallback + contact-level enrichment</td></tr>
-        </table>
-      </div>
-      
-      <div class="ext-section">
-        <h4>TIMELINE</h4>
-        <div class="timeline-grid">
-          <span class="tl-label">Mapping</span><span class="tl-val">4 days</span>
-          <span class="tl-label">Build</span><span class="tl-val">2 weeks</span>
-          <span class="tl-label">Tuning</span><span class="tl-val">ongoing</span>
-        </div>
-      </div>
-      
-      <a href="#" class="read-more">Read full case study &rarr;</a>
     `;
   }
   
