@@ -432,30 +432,49 @@ function sleep(ms){
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function runLoader(){
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*';
+async function scrambleText(element, newText) {
+    const duration = 400;
+    const steps = 12;
+    const stepTime = duration / steps;
+    
+    for (let i = 0; i <= steps; i++) {
+        let current = '';
+        for (let j = 0; j < newText.length; j++) {
+            if (i / steps > j / newText.length) {
+                current += newText[j];
+            } else {
+                current += chars[Math.floor(Math.random() * chars.length)];
+            }
+        }
+        element.textContent = current;
+        await sleep(stepTime);
+    }
+    element.textContent = newText;
+}
 
+async function runLoader(){
     const stages = [
-        "Routing",
-        "Scoring",
-        "Enriching"
+        "Initializing Engine",
+        "Routing Signals",
+        "Scoring Accounts",
+        "Enriching Data",
+        "Launching Portfolio"
     ];
 
     const stage = document.getElementById("stageText");
     const word = document.getElementById("stageWord");
 
     for(const text of stages){
-
-        word.textContent = text;
-
         stage.classList.add("show");
-        await sleep(520);
+        await scrambleText(word, text);
+        await sleep(500);
 
         stage.classList.remove("show");
         await sleep(260);
     }
 
     await sleep(150);
-
     document.getElementById("loader").classList.add("hide");
     document.body.style.overflow = "";
 }
