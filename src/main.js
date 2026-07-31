@@ -368,6 +368,76 @@ modalEnrichBtn.addEventListener('click', async () => {
         </a>
       </div>
     `;
+  } else if (document.getElementById('modalTitle').textContent === 'Intent Terminal') {
+    ext.innerHTML = `
+      <div class="ext-section">
+        <h4>THE CORE PROBLEM</h4>
+        <p>Modern outbound sales is broken. The standard playbook of buying a massive list of contacts and dumping them into automated email sequences results in terrible conversion rates and a damaged brand reputation.</p>
+        <p style="margin-top: 8px;">Top sales reps know that timing and context are everything. Reaching out to a prospect exactly when they have a problem to solve, and referencing exactly why they need your solution, is the only way to stand out.</p>
+        <p style="margin-top: 8px;">The bottleneck is that researching companies, detecting buying intent, finding the right decision makers, and crafting hyper personalized emails takes humans up to 45 minutes per account. It just doesn't scale.</p>
+      </div>
+
+      <div class="ext-section">
+        <h4>THE SOLUTION</h4>
+        <p>We built the Intent Platform. It is a fully autonomous outbound engine designed to scale the brain of a top performing sales rep.</p>
+        <p style="margin-top: 8px;">Instead of relying on volume, the platform relies on precision. By bridging the gap between web scraping, data enrichment, and AI reasoning, we created a system that monitors target markets, detects buying signals, and drafts highly personalized outreach without any human intervention.</p>
+      </div>
+
+      <div class="ext-section">
+        <h4>HOW THE GTM ENGINE WORKS</h4>
+        
+        <h5 style="margin-top: 16px; margin-bottom: 8px; font-weight: 600; font-size: 13.5px; color: var(--ink);">A. Intent Driven Targeting</h5>
+        <p>Instead of buying static lead lists, the platform actively monitors the internet based on your Ideal Customer Profile.</p>
+        <ul style="margin-top: 8px;">
+          <li><strong>Custom Triggers:</strong> Sales leaders define specific market triggers, like "B2B SaaS companies hiring for Sales roles".</li>
+          <li><strong>AI Signal Extraction:</strong> The engine deeply scans target company websites and uses AI to act as a forensic analyst. It reads the company's content to extract explicit buying signals and assigns a mathematical Intent Score.</li>
+          <li><strong>The Filter:</strong> Only companies that show active intent and score above a predefined threshold are pushed into the sales pipeline.</li>
+        </ul>
+        <div style="background: var(--row-alt); border: 1px dashed var(--grid); padding: 24px; border-radius: 6px; text-align: center; margin: 16px 0;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint);">[ Placeholder: Monitoring Logs UI ]</span>
+        </div>
+
+        <h5 style="margin-top: 24px; margin-bottom: 8px; font-weight: 600; font-size: 13.5px; color: var(--ink);">B. The 1-Click Autonomous Pipeline</h5>
+        <p>Once a company is flagged as High Intent, a seamless automated pipeline is triggered to get you to the inbox instantly:</p>
+        <ul style="margin-top: 8px;">
+          <li><strong>Enrichment:</strong> The platform automatically pings Apollo.io to find the exact decision makers you need to speak with and grabs their verified contact information.</li>
+          <li><strong>AI Generation:</strong> The enriched data is combined with the exact buying signals the Engine detected. The AI drafts a highly personalized email, a LinkedIn connection request, and cold call notes that explicitly reference the prospect's current initiatives.</li>
+          <li><strong>CRM Sync:</strong> The drafted outreach is instantly synced as a Note directly to the contact's record in HubSpot, ready for your sales reps to review and send.</li>
+        </ul>
+        <div style="background: var(--row-alt); border: 1px dashed var(--grid); padding: 24px; border-radius: 6px; text-align: center; margin: 16px 0;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint);">[ Placeholder: Pipeline Workflow Automation UI ]</span>
+        </div>
+
+        <h5 style="margin-top: 24px; margin-bottom: 8px; font-weight: 600; font-size: 13.5px; color: var(--ink);">C. Dynamic Campaign Strategy</h5>
+        <p>A pitch to a CTO needs to sound very different from a pitch to a VP of Marketing. We built a robust Campaign Workspace to handle multiple Go-To-Market motions.</p>
+        <ul style="margin-top: 8px;">
+          <li><strong>Segmented Workspaces:</strong> Sales leaders can create isolated workspaces for different market segments or product lines.</li>
+          <li><strong>Custom AI Personas:</strong> Inside each workspace, users can inject custom rules into the AI. You can tell it to "Act as a casual technical founder" for one campaign, and "Keep it under 100 words and focus on ROI" for another.</li>
+          <li><strong>The Result:</strong> The AI adapts its tone and structure perfectly for every unique target audience, maintaining brand voice across thousands of emails.</li>
+        </ul>
+        <div style="background: var(--row-alt); border: 1px dashed var(--grid); padding: 24px; border-radius: 6px; text-align: center; margin: 16px 0;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint);">[ Placeholder: Prompt Customization UI ]</span>
+        </div>
+
+        <h5 style="margin-top: 24px; margin-bottom: 8px; font-weight: 600; font-size: 13.5px; color: var(--ink);">D. Revenue Operations & Analytics</h5>
+        <p>To give RevOps and sales leaders a clear view of the engine's performance, we built a comprehensive real time dashboard.</p>
+        <ul style="margin-top: 8px;">
+          <li><strong>Pipeline KPIs:</strong> Tracking for Outreach Drafted, HubSpot Syncs, and Funnel Conversion rates to measure true pipeline velocity.</li>
+          <li><strong>Intent Trend Charts:</strong> A 7 day line chart showing exactly how many personalized drafts the AI is generating over time.</li>
+          <li><strong>Campaign Leaderboards:</strong> Ranking campaigns based on how many successful CRM syncs they have achieved to identify your top performing Ideal Customer Profiles.</li>
+        </ul>
+        <div style="background: var(--row-alt); border: 1px dashed var(--grid); padding: 24px; border-radius: 6px; text-align: center; margin: 16px 0;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint);">[ Placeholder: Analytics Dashboard ]</span>
+        </div>
+      </div>
+
+      <div class="ext-section">
+        <h4>THE BUSINESS IMPACT</h4>
+        <p>What used to take a sales rep 45 minutes of manual research and writing per account now happens instantly, accurately, and at scale.</p>
+        <p style="margin-top: 8px;">The Intent Platform doesn't just automate emails, it automates research, timing, and relevance. By eliminating the manual grunt work, sales reps can spend 100% of their time actually closing deals rather than writing emails.</p>
+        <p style="margin-top: 8px;">We created an autonomous revenue engine that actually sounds human, turning outbound sales from a numbers game back into a relationship game.</p>
+      </div>
+    `;
   } else {
     ext.innerHTML = `
       <div class="stats-grid">
