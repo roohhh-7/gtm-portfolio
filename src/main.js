@@ -434,8 +434,8 @@ function sleep(ms){
 
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*';
 async function scrambleText(element, newText) {
-    const duration = 400;
-    const steps = 12;
+    const duration = 220; // sped up from 400
+    const steps = 8;
     const stepTime = duration / steps;
     
     for (let i = 0; i <= steps; i++) {
@@ -468,13 +468,13 @@ async function runLoader(){
     for(const text of stages){
         stage.classList.add("show");
         await scrambleText(word, text);
-        await sleep(500);
+        await sleep(150); // sped up
 
         stage.classList.remove("show");
-        await sleep(260);
+        await sleep(80); // sped up
     }
 
-    await sleep(150);
+    await sleep(50);
     document.getElementById("loader").classList.add("hide");
     document.body.style.overflow = "";
 }
