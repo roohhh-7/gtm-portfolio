@@ -455,9 +455,7 @@ async function scrambleText(element, newText) {
 
 async function runLoader(){
     const stages = [
-        "Initializing Engine",
         "Routing Signals",
-        "Scoring Accounts",
         "Enriching Data",
         "Launching Portfolio"
     ];
