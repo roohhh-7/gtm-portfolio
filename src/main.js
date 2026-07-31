@@ -425,3 +425,39 @@ modalEnrichBtn.addEventListener('click', async () => {
   modalEnrichBtn.classList.add('done');
   showToast('Project details enriched', 'success');
 });
+
+document.body.style.overflow = "hidden";
+
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function runLoader(){
+
+    const stages = [
+        "Routing",
+        "Scoring",
+        "Enriching"
+    ];
+
+    const stage = document.getElementById("stageText");
+    const word = document.getElementById("stageWord");
+
+    for(const text of stages){
+
+        word.textContent = text;
+
+        stage.classList.add("show");
+        await sleep(520);
+
+        stage.classList.remove("show");
+        await sleep(260);
+    }
+
+    await sleep(150);
+
+    document.getElementById("loader").classList.add("hide");
+    document.body.style.overflow = "";
+}
+
+runLoader();
