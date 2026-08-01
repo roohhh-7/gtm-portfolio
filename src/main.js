@@ -169,8 +169,10 @@ document.getElementById('btnRunAll').addEventListener('click', async () => {
     runGridEnrichment('btnContact', 'contactBody', CONTACTS, fillContactRow, 'contact')
   ]);
   
+  const isMobile = window.innerWidth <= 768;
   runAllBtn.classList.remove('is-running');
-  runAllBtn.querySelector('.label').textContent = 'All Sheets Enriched';
+  runAllBtn.classList.add('done');
+  runAllBtn.querySelector('.label').textContent = isMobile ? 'All Enriched' : 'All Sheets Enriched';
   showToast('Global enrichment complete!', 'info');
 });
 
