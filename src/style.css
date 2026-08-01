@@ -643,13 +643,13 @@ a.contact-link:hover {
   .mobile-text { display: inline; }
 
   .run-all-btn {
-    padding: 6px 10px;
-    font-size: 11px;
-    gap: 4px;
-    letter-spacing: -0.01em;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 6px;
   }
   .run-all-btn .spark {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   /* Projects table - hide #, Stack, Impact */
