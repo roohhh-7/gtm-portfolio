@@ -424,6 +424,12 @@ modalEnrichBtn.addEventListener('click', async () => {
           <span class="tl-label">Time-to-Value</span><span class="tl-val">Instant</span>
         </div>
       </div>
+      
+      <div style="margin-top: 24px;">
+        <a href="https://app.notion.com/p/Case-Study-Scaling-Outbound-Sales-with-the-Intent-Platform-3af8fab9854d8042855ae5d9c469e1b8" target="_blank" class="run-btn" style="text-decoration:none; display:inline-flex;">
+          <span class="spark">✦</span><span class="label">View full case study</span>
+        </a>
+      </div>
     `;
   } else {
     ext.innerHTML = `
