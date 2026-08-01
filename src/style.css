@@ -680,7 +680,7 @@ a.contact-link:hover {
   width: 80px;
   height: 40px;
   background:
-    radial-gradient(circle 11px at top,#0000 94%,#ECEBFC) 0 20px,
+    radial-gradient(circle 11px at top,#0000 94%,#A8A3F5) 0 20px,
     radial-gradient(circle 11px at top,#0000 94%,#7C76F2) 0 10px,
     radial-gradient(circle 11px at top,#0000 94%,#4E47E0) 0 0   ;
   background-size: 20px 100%;
